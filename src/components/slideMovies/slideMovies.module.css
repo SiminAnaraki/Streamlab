@@ -1,0 +1,78 @@
+#app {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    background: #161616;
+    font-family:  sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #161616;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slideMovies {
+    padding:90px 0;
+    background-color: #161616;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pic {
+      width: 100%;
+      height: 100%;             
+  }
+  .slideMovies .titr {
+    display: flex;
+    color:#fff;
+    justify-content: space-between;
+    align-items: center;;
+  }
+  .slideMovies .titr h4 {
+    font-size:28px;
+    margin:0;
+    padding-bottom: 5px;
+  }
+  .slideMovies .titr p {
+    background-color: #e50916;
+    padding:13px 33px
+  }
+  .slideMovies ul li {
+    width:110%;
+    background-color: #161616;
+  }
+  .slideMovies ul li p {
+    font-size:16px;
+    text-align:left;
+    transition:all .5s;
+    color:#fff
+  }
+  .slideMovies ul li h6 {
+    font-size:12px;
+    text-align:left;
+    color:#e50916;
+  }
+  .slideMovies ul li p:hover {
+    color:#e50916;
+  }

@@ -1,0 +1,54 @@
+.search {
+    position: relative;
+}
+.search button {
+    position: absolute;
+    bottom:16px;
+    left:280px;
+    width:54px;
+    height:54px;
+}
+.search i {
+    transition: all 1s;
+}
+.search input {
+    background-color: #161616;
+    border: 1px solid #161616;
+    width:91%;
+    height:54px;
+    margin:15px; 
+    color:#fff;
+    padding:0 15px;
+    font-size: 1.1rem;;
+}
+.search input:focus {
+    border:1px solid #221f1f;
+    outline: none;
+}
+.search .reply {
+    position: absolute;
+    top:80px;
+    right:0px;
+    background: rgba(0,0,0,.5);
+}
+.search .reply ul {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.search .reply ul li {
+    width:50%;
+    padding:5px 5px;
+}
+.search .reply .eachReply {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.search .reply ul li p {
+    margin:0;
+    font-size: .8rem;
+}
+.search .reply ul li img {
+    width:60px;
+}

@@ -1,0 +1,105 @@
+.register:after {
+    background-image: url(/public/assets/images/main/asset-3.jpeg);
+    background-size:cover;
+    background-position:center center;
+    filter:blur(6px);
+    -webkit-filter: blur(6px);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    content:"";
+    z-index: -10;
+    box-shadow: inset 8px 8px rgba(41, 41, 42,.6) ;
+}
+.register:before {
+    background-color: rgba(9, 12, 22, 0.6);
+    filter:blur(10px);
+    -webkit-filter: blur(10px);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    content:"";
+    z-index:-5;
+}
+.square {
+    z-index:10;
+    background-color: #161616;
+    width:750px;
+    height:657px;
+    padding:20px 15px ;
+    position:absolute;
+    top:60%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size: 1.12rem;
+}
+.square h5 {
+    font-size: 1.9rem;
+    margin:0;
+    margin-bottom:18px;
+    position:relative;
+    border-bottom: 1px solid #221f1f;
+    text-transform: uppercase;
+    padding-left: 18px;
+}
+.square h5:after {
+    content:"";
+    position:absolute;
+    width:100px;
+    height:3px;
+    background: #e50916;
+    top:57px;
+    left:18px;
+    display:inline-block;
+    margin:0;
+}
+.square ul {
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+.square ul li {
+    width:50%;
+    padding:0 15px;
+    text-transform: capitalize;
+}
+.square .color {
+    width:100%;
+    height:54px;
+    background-color: #221f1f;
+    border:1px solid #221f1f;
+    margin-bottom: 15px;
+    transition: all .5s;
+    color:#fff;
+    font-size: 1.3rem;
+}
+.square .color:hover,
+.square .color:focus {
+    border:1px solid #e50916;
+    outline: none;
+}
+.price {
+    margin: 20px 0 0 10px;
+}
+.price label,.price input {
+    margin-bottom: 25px;
+}
+.price p {
+    display: inline-block;
+    padding-left:3px;
+    margin:0;
+}
+.square .submit {
+    padding:18px 28px;
+    border-radius: 0;
+    border: 1px solid #e50916;
+    background-color: #e50916;
+    color:#fff;
+    font-size: 1rem;
+    margin:15px 0 0px 17px;
+    
+}

@@ -1,0 +1,91 @@
+
+
+body {
+  background: #eee;
+  font-family: sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer {
+  position:relative;
+}
+.layer:after {
+  position:absolute;
+  top:0;
+  left:0;
+  content:"";
+  width:100%;
+  height:100%;
+  background-color: rgba(44, 43, 43, 0.6);
+}
+.layer img {
+  width:100%;
+  height:100%;
+  
+}
+.layer .flexHolder{
+  display:flex;
+  gap:60px;
+  justify-content: space-between;
+  position: absolute;
+  top:25%;
+  z-index: 999;
+  color:#fff;
+  left:50%;
+  transform: translateX(-50%);
+  width:100%;
+  height:100%;
+}
+.layer .leftMotion {
+  text-align: left;
+  width:50%;
+  padding:0 30px;
+}
+.layer .leftMotion .red {
+  color:#e50916;
+  font-size: 2.5rem;
+  padding-right: 10px;
+  margin-bottom:10px;
+}
+.layer .leftMotion .title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 550;
+  letter-spacing: 2px;
+  margin-bottom:10px;
+}
+.layer .leftMotion .movieName {
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin:0
+}
+.layer .leftMotion .rate p {
+  width:95%;
+  font-size: 1.28rem;
+  color:#cecfd1;
+}
+.layer .rightMotion {
+  width:50%;
+}
+.layer .rightMotion img {
+  width:720px;
+  height:auto;
+}
+
+
+
