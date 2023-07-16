@@ -5,19 +5,21 @@ import { Link } from 'react-router-dom';
 import { Pagination } from 'antd';
 
 export default function Movies(){
-    const [movies,setMovies] = useState([])
+    const [movies,setMovies] = useState({metadata:{curent_page:"1"}})
     useEffect( ()=>{
         getApi();
     } , [] )
-    function getApi(){
-        axios.get("https://moviesapi.ir/api/v1/movies",{params:{page:1}})
-  .then(function (response) {
-    setMovies(response.data.data);
-    console.log(movies)
+    function getApi(page=1){
+        axios.get("https://moviesapi.ir/api/v1/movies",{params:{page:page}})
+        .then(function (response) {
+        setMovies(response.data);
     })}
-    
+    function changePage(page){
+      getApi(page)
+    }
+
     function renderFarm(){
-      return movies.map((movie) => {
+      return movies.data?.map((movie) => {
         const {poster,title,id} = movie
         return (
           <li key={id}>
@@ -40,7 +42,7 @@ export default function Movies(){
           <br></br>
           <br></br>
           <div className='pagination'>
-          <Pagination defaultCurrent={1} total={250} />
+          <Pagination defaultCurrent={movies.metadata.current_page} total={movies.metadata.total_count}  onChange={changePage}/>
           </div>
           
         </div>
