@@ -1,0 +1,51 @@
+/* #app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+} */
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.special p {
+opacity:1;
+}
+.swiper-slide-visible   {
+  object-fit: cover;
+  object-position: top;
+}
+.special p {
+  opacity: 1 !important;
+  font-size:1.5rem;;
+  font-weight:bold;
+  color: #fff;
+  padding-bottom: 20px;
+  
+}
+.special  img {
+  object-fit: contain;
+  width:70% !important;
+  height:70% !important;
+  border-radius: 15px;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination span {
+  background-color: #e50916;
+}
+
+
+
+
+

@@ -15,7 +15,7 @@ export default function SingleMovie(){
    
   }
     )}
-        const {poster,title} = movie
+        const {poster,title,} = movie
         return (
             <>
             <img src={poster}/>

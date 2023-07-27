@@ -1,0 +1,49 @@
+.genres {
+    position:relative;
+    width:100%;
+    height:100%
+}
+.genres::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 5;
+}
+.genresBack {
+    width:100%;
+    height:100%;
+    z-index: -50;
+}
+.genresList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap:30px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+}
+
+.genresList li {
+    padding: 0 !important;
+    text-align: left;
+    font-size: 1.5rem;
+}
+.genresList li p {
+    border:3px solid #e50916;
+    display:inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+.genresList li p:hover {
+    color:#ba535f;
+    
+}
+

@@ -26,7 +26,7 @@ export default function Genres(){
             const {id,name} = genre;
             return(
                 <li key = {id}>
-                    <Link to = {`/genre/${id}`}><p>{name}</p></Link>
+                    <Link to = {`/genre/${id}/${name}`}><p>{name}</p></Link>
                 </li>
             )
         })

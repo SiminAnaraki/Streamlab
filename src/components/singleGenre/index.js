@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import styles from "./singleGenre.module.css";
 
 export default function SingleGenre(){
-    const {genreid} = useParams();
+    const {genreid,name} = useParams();
     const [genre,setGenre] = useState([]);
     useEffect(()=>{
         getApi()
-    },[]);
+    },[genreid]);
        function getApi() {
         axios.get(`https://moviesapi.ir/api/v1/genres/${genreid}/movies`)
         .then(function (response) {
@@ -17,20 +18,26 @@ export default function SingleGenre(){
           )}
         function genreFarm(){
             return genre.map(function(eachGenre){
-                const {id ,poster,title,genres} = eachGenre;
+                const {id ,poster,title} = eachGenre;
                 return (
-                    <li>
-                        <img src={poster}/>
+                    <li key={id}>
+                        <Link to= {`/Movies/${id}`}><img src={poster}/>
+                            <h4>{title}</h4>
+                        </Link>
                     </li>
                 )})
             }
                 
     return(
         <>
-        <ul>
-            {genreFarm()}
-        </ul>
+            <div className="smallContainer">
+            <h1 className={styles.groupName}>{name}</h1>
+                <ul className={styles.singleGenreList}>
+                    {genreFarm()}
+                </ul>
+            </div>
         </>
+        
     )
           
           

@@ -27,9 +27,21 @@ a {
   width: 1475px;
   margin: 0 auto;
 }
+.smallContainer {
+  width:1250px;
+  margin:0 auto;
+}
 .active {
   color:#e50916;
 }
 .upCase {
   text-transform: uppercase;
+}
+.swiper-button-prev {
+  font-weight:700;
+  padding-left:25px;
+}
+.swiper-button-next {
+  font-weight:700;
+  padding-right:25px;
 }

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export default function Header(){
     useEffect(() => {
-        document.addEventListener("scroll",myFunction)
+        window.addEventListener("scroll",myFunction)
         function myFunction() {
             if (document.body.scrollTop > 40|| document.documentElement.scrollTop > 40) {
                 document.getElementById("forheader").classList.add(`${styles.headerBackDark}`);
@@ -15,7 +15,7 @@ export default function Header(){
               }
              ;
     }
-    },[])
+    },[{}])
         const showSearch = () => {
         document.getElementById("box").classList.toggle(`${styles.searchBoxIn}`);
         document.getElementById("magnifier").classList.toggle("fa-xmark");
@@ -60,7 +60,7 @@ export default function Header(){
                             </li>
                             <li className={styles.haveGenres} >
                                 <div className={`${styles.angle} ${styles.red}`}  >
-                                    <Link to ="/Movies"><p onMouseOver={showGenresTV} onMouseLeave={dontShowGenresTV}>TV Shows</p></Link>
+                                    <Link to ="/TV-Show"><p onMouseOver={showGenresTV} onMouseLeave={dontShowGenresTV}>TV Shows</p></Link>
                                     <i class="fa-solid fa-angle-down" onMouseOver={showGenresTV} onMouseLeave={dontShowGenresTV}></i>
                                 </div>
                                 <div className={styles.genresOutTV} id = "genresListTV" onMouseOver={showGenresTV} onMouseLeave={dontShowGenresTV} > 

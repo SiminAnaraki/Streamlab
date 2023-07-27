@@ -9,14 +9,14 @@ import { Link } from "react-router-dom";
 export default function SlideMovies(props) {
     function renderFarm(){
         return (
-            props.info.map((movie)=> {
+            props.info?.map((movie)=> {
                 const { poster , id , title , genres } = movie
                 return (
                     <SwiperSlide>
                         <li key={id}>
                             <Link to = {`/Movies/${id}`}>
                                 <img className={styles.pic} src={poster} />
-                                <p className="movieTitle">{title}</p>
+                                <p className={styles.movieTitle}>{title}</p>
                                 <h6>{genres}</h6>
                             </Link>
                             

@@ -8,6 +8,9 @@ import LogIn from "../pages/logIn";
 import Register from "../pages/register";
 import RecoverPassword from "../pages/recoverPassword";
 import SingleGenrePage from "../pages/singleGenrePage";
+import MoreGenres from "./genres";
+import All from "../pages/AllGenresPage";
+import AllGenres from "../pages/AllGenresPage";
 
 const router = createBrowserRouter([
     {
@@ -27,12 +30,16 @@ const router = createBrowserRouter([
         element:<TVShows/>,
     },
     {
-        path: "/genre/:genreid",
+        path: "/genre/:genreid/:name",
         element:<SingleGenrePage/>,
     },
+    {
+        path: "/all",
+        element:<AllGenres/>,
+    },
     // {
-    //     path:"TV-Show/:id",
-    //     element:<TVShow/>,
+    //     path:"/TV-Show",
+    //     element:<Genres/>,
     // },
      {
          path:"/contact",

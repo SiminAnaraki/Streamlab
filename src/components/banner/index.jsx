@@ -8,13 +8,20 @@ import 'swiper/css/navigation';
 import styles from './banner.module.css';
 // import required modules
 import { Autoplay, Navigation } from 'swiper';
+import BannerInfo1 from './bannerInfo/info1';
+import BannerInfo2 from './bannerInfo/info2';
+import BannerInfo3 from './bannerInfo/info3';
 
 export default function Banner() {
   
   return (
     <>
-    <div className={styles.banner}>
       <Swiper
+        style={{"--swiper-navigation-size":"25px",
+                '--swiper-navigation-color': '#fff',
+                '--swiper-navigation-weight': '500',
+              }}
+        loop={true}
         spaceBetween={0}
         centeredSlides={false}
         autoplay={{
@@ -25,60 +32,57 @@ export default function Banner() {
           clickable: false,
         }}
         navigation={true}
-        modules={[ Navigation]}
+        modules={[ Navigation,Autoplay]}
         
         className="mySwiper"
       >
         <SwiperSlide>
           <div className={styles.layer}>
-            <img src="/assets/images/main/asset-1.jpeg"/>
+            <img  className={styles.mainPic} src="/assets/images/main/Feature+3-1.png"/>
             <div className={styles.flexHolder}>
               <div className={styles.leftMotion}>                  
                 <span className={styles.red}>|</span>
                 <span className={styles.title}>Most Viewed</span>
-                <h1 className={styles.movieName}>King of Skull</h1>
-                <div className={styles.rate}>
-                  <p>Streamlab is a long established fact that a reader will be distracted
-                  by the readable content of a page The point of using Lorem Streamlab.
-                  </p>
-                  <ul>
-                    <li>
-                      <strong>Cast:</strong>
-                      <span>Anna Romanson,Robert Romanson</span>
-                    </li>
-                    <li>
-                    <strong></strong>
-                    </li>
-                    <li></li>
-                  </ul>
+                <BannerInfo1/>
                 </div>
-              </div>
               <div className={styles.rightMotion}>
-                <img src="/assets/images/main/asset-1.jpeg"/>
+                <img src="/assets/images/main/Feature+3-1.png"/>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.layer}>
-            <img src="/assets/images/main/asset-3.jpeg"/>      
-            <div className="container">
-              <div className={styles.flexHolder}>
-              <span className={styles.red}>|</span>
-              <span className={styles.title}>Most Viewed</span>
+        <div className={styles.layer}>
+            <img  className={styles.mainPic} src="/assets/images/main/b990953c9609c23ec6d91d893f42620e.png"/>
+            <div className={styles.flexHolder}>
+              <div className={styles.leftMotion}>                  
+                <span className={styles.red}>|</span>
+                <span className={styles.title}>Most Viewed</span>
+                <BannerInfo2/>
+                </div>
+              <div className={styles.rightMotion}>
+                <img src="/assets/images/main/b990953c9609c23ec6d91d893f42620e.png"/>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.layer}>
-            <img src="/assets/images/main/asset-4.jpeg"/>
-          </div>
-          <div className="container">
+        <div className={styles.layer}>
+            <img  className={styles.mainPic} src="/assets/images/main/pianist.jpg"/>
+            <div className={styles.flexHolder}>
+              <div className={styles.leftMotion}>                  
+                <span className={styles.red}>|</span>
+                <span className={styles.title}>Most Viewed</span>
+                <BannerInfo3/>
+                </div>
+              <div className={styles.rightMotion}>
+                <img src="/assets/images/main/pianist.jpg"/>
+              </div>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
-    </div>
+
     </>
   );
 }

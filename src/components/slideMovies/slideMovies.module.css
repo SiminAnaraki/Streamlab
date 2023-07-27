@@ -30,7 +30,7 @@
     align-items: center;
   }
   .slideMovies {
-    padding:90px 0;
+    padding-top:40px;
     background-color: #161616;
   }
   .swiper-slide img {
@@ -41,7 +41,8 @@
   }
   .pic {
       width: 100%;
-      height: 100%;             
+      height: 100%;   
+      border-radius: 5px;          
   }
   .slideMovies .titr {
     display: flex;
@@ -62,16 +63,22 @@
     width:110%;
     background-color: #161616;
   }
-  .slideMovies ul li p {
-    font-size:16px;
+  .slideMovies ul li .movieTitle {
+    font-size:1.2rem;
     text-align:left;
     transition:all .5s;
-    color:#fff
+    color:#fff;
+    width:max-content;
+    margin:0;
+    font-weight: bold;
   }
   .slideMovies ul li h6 {
-    font-size:12px;
+    font-size:1rem;
     text-align:left;
     color:#e50916;
+    margin:0;
+    word-spacing: 10px;
+    letter-spacing: 2px;
   }
   .slideMovies ul li p:hover {
     color:#e50916;

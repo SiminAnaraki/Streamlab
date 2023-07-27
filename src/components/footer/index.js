@@ -3,8 +3,8 @@ import Subfooter from './subfooter';
 import { exploreFirst, exploreSecond , companyFirst , companySecond} from './subfooter/data';
 
 export default  function Footer(){ 
-    // window.onscroll = function() {myFunction()};
-    // function myFunction() {
+    // window.onscroll = function() {sim()};
+    // function sim() {
     //     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     //         document.getElementById("top").classList.remove("no-top");
     //       } else 
@@ -58,7 +58,7 @@ export default  function Footer(){
                             </div>
                         </li>
                     </ul>
-                    <div id="top" >
+                    <div  >
                     <a href="#top"><i class="fa-solid fa-angle-up"></i></a>
                     </div>
                 </div>
