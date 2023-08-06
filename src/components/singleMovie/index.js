@@ -15,11 +15,40 @@ export default function SingleMovie(){
    
   }
     )}
-        const {poster,title,} = movie
+        const {poster,title,images=[],year,runtime,director,actors,country,awards,genres,plot} = movie
+        function renderImages(){
+          return images.map((pic,i)=>{
+              return(
+                <li key={i} className="pics">
+                  <img src={pic}/>
+                </li>
+                    )
+        })
+          } 
+        
         return (
             <>
-            <img src={poster}/>
-            <h2>{title}</h2>
+            <div className="container">
+              <div className="movie">
+                <div className="left">
+                  <img className="poster" src={poster}/>
+                </div>
+                <div className="right">
+                  <h1>{title}</h1>
+                  <p><strong>Year: </strong>{year}</p>
+                  <p><strong>Runtime: </strong>{runtime}</p>
+                  <p><strong>Director: </strong>{director}</p>
+                  <p><strong>Actors: </strong>{actors}</p>
+                  <p><strong>Country: </strong>{country}</p>
+                  <p><strong>Awards: </strong>{awards}</p>
+                  <p><strong>Genres: </strong>{genres}</p>
+                  <p className="plot"><strong>Plot: </strong>{plot}</p>
+                </div>
+              </div>
+              <ul className="morePics">
+                {renderImages()}
+              </ul>
+            </div>
             </>
           
           

@@ -103,3 +103,14 @@
     margin:15px 0 0px 17px;
     
 }
+.square i {
+    padding-left: 530px;
+}
+@media only screen and (max-width:1000px){
+    .square {
+        width:600px;
+    } 
+    .square  i {
+        padding-left: 400px;
+    }
+}

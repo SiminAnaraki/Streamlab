@@ -62,9 +62,12 @@
     border:1px solid #221f1f;
     margin-bottom: 15px;
     transition: all .5s;
+    color:#fff
 }
-.square .color:hover {
+.square .color:hover,
+.square .color:focus {
     border:1px solid #e50916;
+    outline:none;
 }
 .square .submit {
     padding:18px 28.8px;
@@ -96,4 +99,15 @@
 }
 .square .link .paddingLeft {
     padding:0px 0px 0px 5px;
+}
+.square .link i {
+    padding-left: 207px;
+}
+@media only screen and (max-width:750px){
+    .square {
+        width:700px;
+    } 
+    .square .link i {
+        padding-left: 400px;
+    }
 }

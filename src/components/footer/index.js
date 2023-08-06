@@ -1,18 +1,27 @@
 import './index.css';
 import Subfooter from './subfooter';
 import { exploreFirst, exploreSecond , companyFirst , companySecond} from './subfooter/data';
+import { useEffect } from "react";
 
 export default  function Footer(){ 
-    // window.onscroll = function() {sim()};
-    // function sim() {
-    //     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    //         document.getElementById("top").classList.remove("no-top");
-    //       } else 
-    //       {  document.getElementById("top").classList.add("no-top");
-            
-    //       }
-    //      ;
-    //     }
+    useEffect(() => {
+        function topPosition() {
+          const element = document.getElementById("position");
+          if (element) {
+            if (document.body.scrollTop >100 || document.documentElement.scrollTop > 100) {
+              element.classList.add("yes-top");
+            } else {
+              element.classList.add("no-top")
+              element.classList.remove("yes-top");
+            }
+          }
+        }
+        window.addEventListener("scroll", topPosition);
+        // Clean up the event listener when the component is unmounted
+        return () => {
+          window.removeEventListener("scroll", topPosition);
+        };
+      }, []);
         return (
             <div className="footer">
                 <div className="container">
@@ -58,7 +67,7 @@ export default  function Footer(){
                             </div>
                         </li>
                     </ul>
-                    <div  >
+                    <div id="position"  >
                     <a href="#top"><i class="fa-solid fa-angle-up"></i></a>
                     </div>
                 </div>
@@ -69,5 +78,5 @@ export default  function Footer(){
                 </div>
             </div>
         )
-        }
+}
            

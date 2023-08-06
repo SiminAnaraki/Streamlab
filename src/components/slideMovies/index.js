@@ -10,17 +10,32 @@ export default function SlideMovies(props) {
     function renderFarm(){
         return (
             props.info?.map((movie)=> {
-                const { poster , id , title , genres } = movie
+                const { poster , id , title , genres ,images=[]} = movie
                 return (
+                    
                     <SwiperSlide>
                         <li key={id}>
                             <Link to = {`/Movies/${id}`}>
-                                <img className={styles.pic} src={poster} />
+                                <div className={styles.picHolder}>
+                                    <img className={styles.pic} src={poster} />
+                                    <div className={styles.play}> <i class="fa-solid fa-play"></i></div>
+                                    <div className={styles.icons}>
+                                        <div className={styles.plus}><i class="fa-solid fa-plus"></i></div>
+                                        <div className={styles.share}>
+                                            <i class="fa-solid fa-share-nodes"></i>
+                                            <div className={styles.box}>
+                                                <i class="fa-brands fa-twitter"></i>
+                                                <i class="fa-brands fa-instagram"></i>
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </div>
+                                        </div>
+                                        <div className={styles.heart}><i class="fa-regular fa-heart"></i></div>
+                                    </div>
+                                </div>
                                 <p className={styles.movieTitle}>{title}</p>
                                 <h6>{genres}</h6>
                             </Link>
-                            
-                        </li>
+                            </li>
                     </SwiperSlide>
                 )
             }
@@ -37,15 +52,48 @@ export default function SlideMovies(props) {
                 </div>
                 <ul>
                     <Swiper
+                        style={{"--swiper-navigation-size":"25px",
+                        '--swiper-navigation-color': '#fff',
+                        '--swiper-navigation-weight': '500',
+                        'font-weight':'700',
+                        'padding-right':'50px',
+                        'padding-left':'50px',
+                      }}
                         slidesPerView={5}
                         spaceBetween={80}
                         navigation={{
                         clickable: true,
                         }}
+                        breakpoints={{
+                            500: {
+                                slidesPerView: 1,
+                                spaceBetween: 60,
+                            },
+                            600: {
+                                slidesPerView: 2,
+                                spaceBetween: 50,
+                            },
+                            // When window width is >= 768px
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 50,
+                            },
+                            // When window width is >= 1024px
+                            1024: {
+                                slidesPerView: 4,
+                                spaceBetween: 60,
+                            },
+                            1400: {
+                                slidesPerView: 5,
+                                spaceBetween: 80,
+                            },
+                        }}
                         modules={[Navigation]}
                         className="mySwiper"
                     >
+                    
                         {renderFarm()}
+                        
                     </Swiper>
                 </ul>
             </div>

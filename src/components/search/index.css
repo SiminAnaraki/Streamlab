@@ -52,3 +52,23 @@
 .search .reply ul li img {
     width:60px;
 }
+.invisible {
+    opacity:0
+}
+@media only screen and (max-width:1000px){
+    .search input {
+       
+        width:80%;
+        height:44px;
+        margin:15px; 
+        color:#fff;
+        padding:0 15px;
+        font-size: 1rem;;
+    }
+    .search button {
+        bottom:16px;
+        left:185px;
+        width:41px;
+        height:41px;
+    }
+}

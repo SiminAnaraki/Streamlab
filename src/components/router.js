@@ -1,16 +1,15 @@
 import {createBrowserRouter,RouterProvider } from "react-router-dom";
 import Home from "../pages/homePage";
 import MoviesPage from "../pages/moviesPage";
-import TVShows from "../pages/TVshows";
 import SingleMoviePage from "../pages/singleMoviePage";
 import ContactUs from "../pages/contactus";
 import LogIn from "../pages/logIn";
 import Register from "../pages/register";
 import RecoverPassword from "../pages/recoverPassword";
 import SingleGenrePage from "../pages/singleGenrePage";
-import MoreGenres from "./genres";
-import All from "../pages/AllGenresPage";
 import AllGenres from "../pages/AllGenresPage";
+import TVShowsPage from "../pages/TVShowsPage";
+import NotFound from "../pages/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -25,10 +24,7 @@ const router = createBrowserRouter([
         path: "/Movies/:id",
         element:<SingleMoviePage/>
     },
-    {
-        path: "/TV-Shows",
-        element:<TVShows/>,
-    },
+    
     {
         path: "/genre/:genreid/:name",
         element:<SingleGenrePage/>,
@@ -37,10 +33,10 @@ const router = createBrowserRouter([
         path: "/all",
         element:<AllGenres/>,
     },
-    // {
-    //     path:"/TV-Show",
-    //     element:<Genres/>,
-    // },
+    {
+        path:"/TV-Show",
+        element:<TVShowsPage/>,
+    },
      {
          path:"/contact",
          element:<ContactUs/>,
@@ -57,10 +53,10 @@ const router = createBrowserRouter([
         path:"/recover-password",
         element:<RecoverPassword/>,
     },
-   // {
-    //     path:"*",
-    //     element:<NotFound/>,
-    // },
+   {
+        path:"*",
+        element:<NotFound/>,
+    },
   ]);
 export default function Router(){
     return(

@@ -1,7 +1,12 @@
 import LayOut from "../../components/layout";
 import "./index.css";
+import { useEffect } from "react";
+
 
 export default function ContactUs(){
+  useEffect(()=>{
+    document.title = "Streamlab/contact us";
+  },[]);
     return(
         <>
         <LayOut>
@@ -9,7 +14,7 @@ export default function ContactUs(){
             <img src="/assets/images/main/lf.jfif"/>
             <div className="container">
                 <div className="banner-content">
-                    <h1 > Contact Us</h1>
+                    <h1 className="big-title"> Contact Us</h1>
                     <i class="fa-solid fa-house-chimney"></i>
                     <span>Home</span>
                     <i class="fa-solid fa-angle-right"></i>
@@ -23,30 +28,36 @@ export default function ContactUs(){
                 <div className="info-icon">
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <h1>our location</h1>
-                <p>The Queen's Walk, Bishop's, London SE1 7PB, United Kingdom</p>
+                <div className="contactInfo">
+                  <h1>our location</h1>
+                  <p>The Queen's Walk, Bishop's, London SE1 7PB, United Kingdom</p>
+                </div>
               </li>
               <li>
                 <div className="info-icon">
                   <i class="fa-solid fa-phone"></i>
                 </div>
-                <h1>call us at</h1>
-                <p>
-                  +(44)7818161573
-                  <br></br>
-                  +(44)7818161573
-                </p>
+                <div className="contactInfo">
+                  <h1>call us at</h1>
+                  <p>
+                    +(44)7818161573
+                    <br></br>
+                    +(44)7818161573
+                  </p>
+                </div>
               </li>
               <li>
                 <div className="info-icon">
                   <i class="fa-regular fa-envelope"></i>
                 </div>
-                <h1>mail us</h1>
-                <p>
-                  info@streamlab.com
-                  <br></br>
-                  sale@streamlab.com
-                </p>
+                <div className="contactInfo">
+                  <h1>mail us</h1>
+                  <p>
+                    info@streamlab.com
+                    <br></br>
+                    sale@streamlab.com
+                  </p>
+                </div>
               </li>
             </ul>
             <div className="get-in-touch">

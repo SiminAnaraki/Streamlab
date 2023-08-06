@@ -1,0 +1,36 @@
+.movie {
+    display:flex;
+    padding-top:95px;
+    gap: 40px;
+    
+}
+.movie .right {
+    width:65%
+}
+.movie .poster{
+    width:380px;
+    height:auto;
+    border-radius: 5px;
+}
+.movie h1 {
+    margin:0;
+}
+.movie p {
+    padding:0px 0
+}
+.movie strong {
+    color:#e50916;
+    font-size: 1.2rem; 
+}
+.movie .plot {
+    width:50%
+}
+.morePics {
+    padding:40px 0;
+    display:flex;
+    justify-content: space-between;
+}
+.morePics img {
+    width:480px;
+    border-radius: 5px;
+}

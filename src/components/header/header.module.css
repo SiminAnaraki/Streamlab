@@ -4,7 +4,7 @@
     top:0;
     left:0;
     width:100%;
-    z-index: 50;
+    z-index: 1000;
     padding:16px 0;
     transition:all 1s;
     
@@ -96,15 +96,24 @@
     font-size:1.2rem;
 }
 .menu .search .searchBoxOut {
-    display:none;
-}
-.menu .search .searchBoxIn {
-    display:block;
+    opacity:0;
+    visibility:hidden;
     position:absolute;
-    top:63px;
+    top:60px;
     right:-20px;
     background-color: #221f1f;
     width:350px;
+    transition: visibility .5s,opacity .5s linear;
+}
+.menu .search .searchBoxIn {
+    opacity:1;
+    visibility:visible;
+    position:absolute;
+    top:60px;
+    right:-20px;
+    background-color: #221f1f;
+    width:350px;
+    transition: visibility .5s,opacity .5s linear;
 }
 .menu ul li .user {
     position: relative;
@@ -121,7 +130,7 @@
     -webkit-font-smoothing:antialiased;
 }
 .menu ul li button {
-    font-size:15px;
+    font-size:1rem;
     color:#fff;
     background-color:#e50916;
     padding:11px 17px;
@@ -129,4 +138,107 @@
     border:1px solid #e50916;
     margin:0;
 }
+@media only screen and (max-width: 1000px){
+    .header {
+        padding:5px 0;
+    }
+    .headerHolder {
+        display: block;
+        text-align: center;
+    }
+    .logo img {
+        width: 180px;
+    }
+    .menu ul { 
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+    }
+    .menu .search .searchBoxOut {
+        top:50px;
+    }
+    .menu .search .searchBoxIn {
+        top:50px;
+    } 
+    .menu .search .searchBoxOut {
+        top:60px;
+        right:-20px;
+        width:230px;
+    }
+    .menu .search .searchBoxIn {
+        top:50px;
+        right:-20px;
+        width:230px;
+   
+    }
+}
+@media only screen and (max-width: 910px){
+    .menu ul .red p {
+        font-size: 1rem;
+    }
+    .menu .search i {
+        font-size:1.1rem;
+    }
+    .menu .search .searchBoxOut {
+        top:50px;
+    }
+    .menu .search .searchBoxIn {
+        top:40px;
+    } 
+    .menu ul li .user {
+        width:40px;
+        height:40px;
+    }
+    .menu ul li button {
+        font-size:.9rem;
+    }
+    .menu ul li { 
+        padding-left: 30px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .logo img {
+        width: 170px;
+    }
+    .menu ul li { 
+        padding-left: 15px;
+    }
+    .menu ul li .angle {
+        gap:5px;
+    }
+    .menu ul li .angle i {
+        font-size: .8rem;
+        margin-top:3px;
+    }
+}
+@media only screen and (max-width: 660px){
+    .logo img {
+        width: 150px;
+    }
+    .menu ul .red p {
+        font-size: .8rem;
+    }
+    .menu ul li .user {
+        width:32px;
+        height:32px;
+    }
+    .menu ul li button {
+        font-size:.7rem;
+        padding:10px 11px;
+    }
+    .menu .search i {
+        font-size:1rem;
+    }
+    .menu ul li { 
+        padding-left: 15px;
+    }
+    .menu .flexHolder {
+        justify-content: space-between;
+    }
+    
+}
+
+
+   
+
 

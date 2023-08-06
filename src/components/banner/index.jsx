@@ -11,6 +11,7 @@ import { Autoplay, Navigation } from 'swiper';
 import BannerInfo1 from './bannerInfo/info1';
 import BannerInfo2 from './bannerInfo/info2';
 import BannerInfo3 from './bannerInfo/info3';
+import { Link } from 'react-router-dom';
 
 export default function Banner() {
   
@@ -32,7 +33,7 @@ export default function Banner() {
           clickable: false,
         }}
         navigation={true}
-        modules={[ Navigation,Autoplay]}
+        modules={[ Navigation,]}
         
         className="mySwiper"
       >
@@ -47,6 +48,12 @@ export default function Banner() {
                 </div>
               <div className={styles.rightMotion}>
                 <img src="/assets/images/main/Feature+3-1.png"/>
+                <Link to="/Movies/14">
+                  <div className={styles.video}>
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Trailer</p>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -62,6 +69,12 @@ export default function Banner() {
                 </div>
               <div className={styles.rightMotion}>
                 <img src="/assets/images/main/b990953c9609c23ec6d91d893f42620e.png"/>
+                <Link to="/Movies/27">
+                  <div className={styles.video}>
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Trailer</p>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -77,6 +90,12 @@ export default function Banner() {
                 </div>
               <div className={styles.rightMotion}>
                 <img src="/assets/images/main/pianist.jpg"/>
+                <Link to="/Movies/42">
+                  <div className={styles.video}>
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Trailer</p>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

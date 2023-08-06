@@ -45,3 +45,20 @@ a {
   font-weight:700;
   padding-right:25px;
 }
+
+@media only screen and (max-width: 1500px){
+  .container{
+    width:100%;
+    padding:0 30px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .container{
+    padding:0 20px;
+  }
+}
+@media only screen and (max-width: 660px){
+  .container{
+    padding:0 10px;
+  }
+}

@@ -3,6 +3,9 @@ import  styles from "./register.module.css";
 import { useEffect } from "react";
 
 export default function Register(){
+    useEffect(()=>{
+        document.title = "Streamlab/Register";
+      },[]);
     useEffect(() =>{
         let checkedRadio = document.getElementById("premium");
         checkedRadio.checked = true;
@@ -70,6 +73,7 @@ export default function Register(){
                                 <br></br>
                             </div>
                                 <input type="submit" value="REGISTER" className={styles.submit} ></input>
+                                <Link to="/"><i class="fa-solid fa-house"></i></Link>
                                 <br></br>
                         </form>
                     </div>
