@@ -60,7 +60,7 @@ export default function TVShows() {
         <ul className={styles.filmList}>
           {renderFarm()}
         </ul>
-        <button onClick={loadMoreMovies}>Load More</button>
+        <button className="upCase" onClick={loadMoreMovies}>Load More</button>
       </div>
     </div>
   );

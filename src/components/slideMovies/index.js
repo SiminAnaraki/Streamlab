@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import  styles from './slideMovies.module.css';
-import { Navigation } from "swiper";
+import { Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
+
 
 export default function SlideMovies(props) {
     function renderFarm(){
@@ -45,7 +46,7 @@ export default function SlideMovies(props) {
   return (
     <>
         <div className={styles.slideMovies}>
-            <div className="container">
+            <div >
                 <div className={styles.titr}>
                     <h4>{props.title}</h4>
                     <Link to={props.link}><p>{props.more}</p></Link>
@@ -55,37 +56,53 @@ export default function SlideMovies(props) {
                         style={{"--swiper-navigation-size":"25px",
                         '--swiper-navigation-color': '#fff',
                         '--swiper-navigation-weight': '500',
-                        'font-weight':'700',
-                        'padding-right':'50px',
-                        'padding-left':'50px',
+                        'padding-left':'55px',
+                        'padding-right':'55px',
                       }}
                         slidesPerView={5}
-                        spaceBetween={80}
+                        spaceBetween={70}
+                        loop={true}
                         navigation={{
                         clickable: true,
                         }}
                         breakpoints={{
+                            400: {
+                                slidesPerView: 2,
+                                spaceBetween: 35,
+                            },
                             500: {
-                                slidesPerView: 1,
-                                spaceBetween: 60,
+                                slidesPerView: 2,
+                                spaceBetween: 40,
                             },
                             600: {
                                 slidesPerView: 2,
-                                spaceBetween: 50,
+                                spaceBetween: 80,
                             },
                             // When window width is >= 768px
-                            768: {
+                            800: {
                                 slidesPerView: 3,
-                                spaceBetween: 50,
+                                spaceBetween:70,
+                            },
+                            900: {
+                                slidesPerView: 3,
+                                spaceBetween: 85,
                             },
                             // When window width is >= 1024px
                             1024: {
                                 slidesPerView: 4,
                                 spaceBetween: 60,
                             },
+                            1200: {
+                                slidesPerView: 4,
+                                spaceBetween: 85,
+                            },
                             1400: {
                                 slidesPerView: 5,
-                                spaceBetween: 80,
+                                spaceBetween: 50,
+                            },
+                            1500: {
+                                slidesPerView: 5,
+                                spaceBetween: 60,
                             },
                         }}
                         modules={[Navigation]}

@@ -5,7 +5,7 @@
     left:0;
     width:100%;
     z-index: 1000;
-    padding:16px 0;
+    padding:1.1% 0;
     transition:all 1s;
     
 }
@@ -25,14 +25,14 @@
     display:flex;
     align-items: center;
     text-align: center;
-    gap:0 10px
+    gap:25px;
 }
 .menu ul li { 
-    padding-left: 37px;
+    padding-left: 30px;
 }
 .menu ul .red p {
     transition: all .5s;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 .menu ul .red:hover p {
     color:#e50916;
@@ -56,7 +56,7 @@
     visibility:hidden;
     opacity:0;
     position:absolute;
-    top:72px;
+    top:140%;
     left:35px;
     width:150%;
     transition: visibility 0.5s,opacity .5s linear;
@@ -65,7 +65,7 @@
     visibility:visible;
     opacity:1;
     position:absolute;
-    top:72px;
+    top:140%;
     left:35px;
     width:150%;
     transition: visibility .5s,opacity .5s linear;
@@ -74,7 +74,7 @@
     visibility:hidden;
     opacity:0;
     position:absolute;
-    top:72px;
+    top:140%;
     left:35px;
     width:125%;
     transition: all .5s;
@@ -83,7 +83,7 @@
     visibility:visible;
     opacity:1;
     position:absolute;
-    top:72px;
+    top:140%;
     left:35px;
     width:125%;
     transition: all .5s;
@@ -99,7 +99,7 @@
     opacity:0;
     visibility:hidden;
     position:absolute;
-    top:60px;
+    top:200%;
     right:-20px;
     background-color: #221f1f;
     width:350px;
@@ -109,7 +109,7 @@
     opacity:1;
     visibility:visible;
     position:absolute;
-    top:60px;
+    top:200%;
     right:-20px;
     background-color: #221f1f;
     width:350px;
@@ -129,114 +129,129 @@
     transform: translate(-50%,-50%);
     -webkit-font-smoothing:antialiased;
 }
-.menu ul li button {
+.menu ul li .subscribe {
     font-size:1rem;
     color:#fff;
     background-color:#e50916;
-    padding:11px 17px;
+    padding:12px 18px;
     text-transform: uppercase;
     border:1px solid #e50916;
     margin:0;
 }
-@media only screen and (max-width: 1000px){
-    .header {
-        padding:5px 0;
-    }
-    .headerHolder {
-        display: block;
-        text-align: center;
-    }
-    .logo img {
-        width: 180px;
-    }
-    .menu ul { 
-        display: flex;
-        justify-content: space-between;
-        padding-right: 30px;
+.hambur {
+    display:none;
+}
+@media only screen and (max-width: 1350px) {
+    .menu .flexHolder {
+        gap:20px;
     }
     .menu .search .searchBoxOut {
-        top:50px;
+        top:200%;
+        right:0px;
+        width:300px;
     }
-    .menu .search .searchBoxIn {
-        top:50px;
-    } 
-    .menu .search .searchBoxOut {
-        top:60px;
-        right:-20px;
-        width:230px;
-    }
-    .menu .search .searchBoxIn {
-        top:50px;
-        right:-20px;
-        width:230px;
-   
+    .menu .search .searchBoxIn { 
+        top:200%;
+        right:0px;
+        width:300px;
     }
 }
-@media only screen and (max-width: 910px){
+@media only screen and (max-width: 1320px) {
+    .menu .haveGenres .genresOut {
+        top:138%;
+        left:30px;
+        width:145%;
+    }
+    .menu .haveGenres .genresIn {
+        top:138%;
+        left:30px;
+        width:145%;
+    }
+    .menu .haveGenres .genresOutTV {
+        top:138%;
+        left:30px;
+        width:120%;
+    }
+    .menu .haveGenres .genresInTV {
+        top:138%;
+        left:30px;
+        width:120%;
+    }
+}
+@media only screen and (max-width: 1250px) {
+    .menu .flexHolder {
+        gap:15px;
+    }
     .menu ul .red p {
+        transition: all .5s;
         font-size: 1rem;
     }
-    .menu .search i {
-        font-size:1.1rem;
+    .menu .haveGenres p {
+        margin:8px  0px;
+        font-size: .8rem;
     }
-    .menu .search .searchBoxOut {
-        top:50px;
+    .menu .haveGenres .genresOut {
+        top:140%;
+        left:30px;
+        width:138%;
     }
-    .menu .search .searchBoxIn {
-        top:40px;
-    } 
+    .menu .haveGenres .genresIn {
+        top:140%;
+        left:30px;
+        width:138%;
+    }
+    .menu .haveGenres .genresOutTV {
+        top:140%;
+        left:30px;
+        width:115%;
+    }
+    .menu .haveGenres .genresInTV {
+        top:140%;
+        left:30px;
+        width:115%;
+    }
     .menu ul li .user {
         width:40px;
         height:40px;
     }
-    .menu ul li button {
+    .menu .search i {
+        font-size:1.1rem;
+    }
+    .menu ul li .subscribe {
         font-size:.9rem;
     }
-    .menu ul li { 
-        padding-left: 30px;
+}
+@media only screen and (max-width: 1200px) {
+    .menu .search .searchBoxOut {
+        top:190%;
+        width:280px;
+    }
+    .menu .search .searchBoxIn { 
+        top:190%;
+        width:280px;
     }
 }
-@media only screen and (max-width: 800px){
-    .logo img {
-        width: 170px;
-    }
-    .menu ul li { 
-        padding-left: 15px;
-    }
-    .menu ul li .angle {
+@media only screen and (max-width: 1100px) {
+    .menu .flexHolder {
         gap:5px;
     }
-    .menu ul li .angle i {
-        font-size: .8rem;
-        margin-top:3px;
-    }
 }
-@media only screen and (max-width: 660px){
-    .logo img {
-        width: 150px;
+@media only screen and (max-width: 1000px) {
+    .menu {
+        display:none
     }
-    .menu ul .red p {
-        font-size: .8rem;
-    }
-    .menu ul li .user {
-        width:32px;
-        height:32px;
-    }
-    .menu ul li button {
-        font-size:.7rem;
-        padding:10px 11px;
-    }
-    .menu .search i {
-        font-size:1rem;
-    }
-    .menu ul li { 
-        padding-left: 15px;
-    }
-    .menu .flexHolder {
-        justify-content: space-between;
+    .hambur {
+        display:block;
     }
     
 }
+@media only screen and (max-width: 800px) {
+.logo img {
+    width:165px;
+    height:auto;
+}
+}
+
 
 
    

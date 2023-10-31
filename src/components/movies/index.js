@@ -57,7 +57,7 @@ export default function Movies(){
           <br></br>
           <br></br>
           <div className={styles.pagination}>
-          <Pagination defaultCurrent={movies.metadata.current_page} total={movies.metadata.total_count}  onChange={changePage}/>
+          <Pagination size="large" defaultCurrent={movies.metadata.current_page} total={movies.metadata.total_count}  onChange={changePage}/>
           </div>
         </div>
       </div>

@@ -1,0 +1,168 @@
+.flexHolder {
+    display:flex;
+    align-items: center;
+    gap:40px;
+}
+.hamburMenu {
+    position:relative;
+}
+.hamburMenu ul {
+    position:absolute;
+    width:600%;
+    top:115%;
+    right:0px;
+    background: #221f1f;
+    text-align: left;
+    padding: 0 15px;
+    border-top: 3px solid #e50916;
+}
+.hamburMenu ul .red{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.hamburMenu ul .red p {
+    transition: all .5s;
+    font-size: 1rem;
+}
+.hamburMenu ul li:hover p,
+.hamburMenu ul li:hover i {
+    color:#e50916;
+}
+
+.hamburMenu .haveGenres p {
+    margin:10px  0px;
+    font-size: .9rem;
+}
+.search {
+    position:relative;
+    cursor: pointer;
+}
+.search i {
+    font-size:1.2rem;
+}
+.search .searchBoxOut {
+    opacity:0;
+    visibility:hidden;
+    position:absolute;
+    top:190%;
+    right:0px;
+    background-color: #221f1f;
+    width:280px;
+    transition: visibility .5s,opacity .5s linear;
+}
+.search .searchBoxIn {
+    opacity:1;
+    visibility:visible;
+    position:absolute;
+    top:190%;
+    right:0px;
+    background-color: #221f1f;
+    width:280px;
+    transition: visibility .5s,opacity .5s linear;
+}
+.hambur .user {
+    position: relative;
+    background-color:#e50916;
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+}
+.hambur  .user i {
+    position: absolute;
+    left: 47%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-font-smoothing:antialiased;
+}
+.hambur .subscribe {
+    font-size:1rem;
+    color:#fff;
+    background-color:#e50916;
+    padding:12px 18px;
+    text-transform: uppercase;
+    border:1px solid #e50916;
+    margin:0; 
+}
+.hambur .hamburIcon {
+    cursor: pointer;
+    background: #e50916;
+    margin-top:10px;
+    padding:5px;
+    height: 40px;
+    color:#fff
+}
+@media only screen and (max-width: 900px) {
+    .flexHolder {
+        gap:30px;
+    }
+    .hambur .subscribe {
+        font-size:.9rem; 
+    }
+    .hambur .user {
+        width:40px;
+        height:40px; 
+    }
+    .search i {
+        font-size:1.1rem;
+    }
+    .search .searchBoxOut {
+        width:260px;
+    }
+    .search .searchBoxIn {
+        width:260px;
+}
+}
+@media only screen and (max-width: 800px) {
+    .flexHolder {
+        gap:20px;
+    }
+    .hamburMenu ul {
+        position:absolute;
+        width:500%;
+        top:115%;
+}
+    .search .searchBoxOut {
+        top:180%;
+}
+    .search .searchBoxIn {
+        top:180%;
+}
+.hamburMenu ul .red p {
+    font-size: .9rem;
+}
+}
+@media only screen and (max-width: 700px) {
+    .flexHolder {
+        gap:15px;
+    }
+    .hambur .subscribe {
+        display:none;
+    }
+    .hamburMenu ul {
+        width:500%;
+        top:110%;
+}
+}
+@media only screen and (max-width: 600px) {
+    .hamburMenu ul {
+        width:400%;
+        top:110%;
+}
+    .hamburMenu ul .red p{
+    font-size: .8rem;
+    margin: 10px 0;
+}
+    .hamburMenu ul .red i {
+    font-size: .9rem;
+}
+.search .searchBoxOut {
+    top:170%;
+    width:250px;
+}
+.search .searchBoxIn {
+    top:170%;
+    width:250px;
+}
+}

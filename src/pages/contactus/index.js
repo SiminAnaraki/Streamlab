@@ -29,7 +29,7 @@ export default function ContactUs(){
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div className="contactInfo">
-                  <h1>our location</h1>
+                  <h1 className="big">our location</h1>
                   <p>The Queen's Walk, Bishop's, London SE1 7PB, United Kingdom</p>
                 </div>
               </li>
@@ -80,7 +80,7 @@ export default function ContactUs(){
                   </ul>
                 </form>
                 <textarea className="message" name="text" placeholder="Your Message" rows="9"></textarea>
-                <button class>SEND</button>
+                <button className="sendButton">SEND</button>
               </div>
               <div className="map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d608995.8645716434!2d-2.3576341280154622!3d53.3989058634117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae0dfe455711%3A0x6df4febf58f5d816!2sSalford!5e0!3m2!1sen!2suk!4v1687622585185!5m2!1sen!2suk" style={{ width:"100%", height:"550px", border:0, loading:"lazy", referrerpolicy:"no-referrer-when-downgrade"}}></iframe>

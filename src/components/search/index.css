@@ -1,12 +1,15 @@
 .search {
     position: relative;
 }
-.search button {
+.search .redButton {
     position: absolute;
     bottom:16px;
     left:280px;
-    width:54px;
-    height:54px;
+    width:52px;
+    height:52px;
+    background-color: #e50916;
+    border: 1px solid #e50916;
+    color:#fff
 }
 .search i {
     transition: all 1s;
@@ -19,7 +22,7 @@
     margin:15px; 
     color:#fff;
     padding:0 15px;
-    font-size: 1.1rem;;
+    font-size: 1.1rem;
 }
 .search input:focus {
     border:1px solid #221f1f;
@@ -27,7 +30,7 @@
 }
 .search .reply {
     position: absolute;
-    top:80px;
+    top:100%;
     right:0px;
     background: rgba(0,0,0,.5);
 }
@@ -55,20 +58,61 @@
 .invisible {
     opacity:0
 }
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:1350px) {
     .search input {
-       
-        width:80%;
-        height:44px;
-        margin:15px; 
-        color:#fff;
-        padding:0 15px;
-        font-size: 1rem;;
+        width:85%;
+        height:52px;
+        margin:13px;
+        font-size: 1rem; 
     }
-    .search button {
+    .search .redButton {
         bottom:16px;
-        left:185px;
-        width:41px;
-        height:41px;
+        left:230px;
+        width:50px;
+        height:50px;
     }
 }
+@media only screen and (max-width:1200px){
+    .search input {
+        width:85%;
+        height:52px;
+        padding:0 12px;
+        
+    }
+    .search .redButton {
+        left:75%;
+        width:48px;
+        height:48px;
+    }
+}
+@media only screen and (max-width:1000px){
+    .search input {
+        height:44px;
+        font-size: 1rem;
+        margin:10px 15px
+    }
+    .search .redButton {
+        bottom:15px;
+        left:75%;
+        width:44px;
+        height:44px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .search .redButton {
+        bottom:15px;
+        left:75%;
+        width:42px;
+        height:42px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .search .redButton {
+        bottom:13px;
+        left:75%;
+        width:40px;
+        height:40px;
+    }
+}
+
+

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LayOut from "../../components/layout";
 import TVShows from "../../components/TVShows";
 import "./index.css"
@@ -12,7 +13,7 @@ export default function TVShowsPage(){
                 <div className="TVBanner-content">
                     <h1 > TV Shows</h1>
                     <i class="fa-solid fa-house-chimney"></i>
-                    <span>Home</span>
+                    <Link to="/"><span >Home</span></Link>
                     <i class="fa-solid fa-angle-right"></i>
                     <span className="active"> TV Shows</span>
                 </div>

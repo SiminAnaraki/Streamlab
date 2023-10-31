@@ -20,10 +20,18 @@ body {
   object-fit: cover;
   object-position: top;
 }
+.special {
+  text-align: center;
+}
+.special .pic {
+  width:100%;
+  height:100%;
+  vertical-align: middle;
+}
 .special .picHolder {
   position:relative;
-  width:75%;
-  height: 90%;
+  width:100%;
+  height: 100%;
 }
 .special .picHolder::after {
   position: absolute;
@@ -31,7 +39,7 @@ body {
   top:0;
   left:0;
   width:100%;
-  height:98%;
+  height:100%;
   background-image: radial-gradient(circle, rgba(60, 61, 60, 0.5), rgba(15, 15, 15, 0.7), rgba(0,0,0,1));
   border-radius: 15px;
   opacity:0;
@@ -63,28 +71,40 @@ body {
   background-color: #e50916;
 }
 @media only screen and (max-width:1024px){
-  .special  img {
-    width:80% !important;
-  }
-  .special .picHolder::after {
-    width:80%;
-  }
+  
   .special p {
    margin-top: 10px;
-    
+   font-size:1.3rem;;
   }
 }
 @media only screen and (max-width:768px){
-  .special .picHolder{
-    margin-left: 100px;
+  .special {
+    text-align: center;
   }
+
   .special p {
-    font-size:1.3rem;;
-   margin-left: 100px;
-   margin-top: 10px;
+    font-size:1.4rem;;
+   margin-left: 0;
+   margin-top: 15px;
     
   }
 }
+@media only screen and (max-width:650px) {
+  .special p {
+    font-size:1.3rem;;
+   margin-left: 0;
+   margin-top: 15px;
+    
+  }
+} 
+@media only screen and (max-width:500px) {
+  .special p {
+    font-size:1.2rem;;
+   margin-left: 0;
+   margin-top: 15px;
+    
+  }
+} 
 
 
 

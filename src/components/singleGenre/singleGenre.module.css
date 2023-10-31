@@ -1,11 +1,11 @@
 .singleGenreList {
     display:flex;
     flex-wrap: wrap;
-    padding:30px 0px 30px 95px;
-    gap:20px 40px
+    margin:0px -15px;
 }
 .singleGenreList li{
-    width:210px
+    width:20%;
+    padding:30px;
 }
 .singleGenreList li img { 
     width:100%;
@@ -13,11 +13,104 @@
     border-radius: 10px;
 }
 .groupName{
-    margin-top:150px;
-    padding-left: 100px;
+    margin-top:10%;
+    padding-left: 20px;
 }
 .singleGenreList h4{
     margin:0;
     padding-bottom: 30px;
     font-size: 1.3rem;
+}
+@media only screen and  (max-width:1300px) {
+    .singleGenreList h4{
+        margin:0;
+        padding-bottom: 30px;
+        font-size: 1.2rem;
+    }
+}
+@media only screen and  (max-width:1150px) {
+    .singleGenreList {
+        margin:30px -15px;
+    }
+    .singleGenreList li{
+        width:20%;
+        padding:30px 20px;
+    }
+    .groupName{
+        padding-left: 15px;
+    }
+    .singleGenreList h4{
+        margin:0;
+        padding-bottom: 30px;
+        font-size: 1.1rem;
+    }
+}
+@media only screen and  (max-width:1000px) {
+    .singleGenreList {
+        margin:30px -20px;
+    }
+    .singleGenreList h4{
+        margin:0;
+        padding-bottom: 25px;
+        font-size: 1rem;
+    }
+    .singleGenreList li{
+        width:25%;
+        padding:25px;
+}
+}
+@media only screen and  (max-width:900px) {
+    .groupName{
+        margin-top:15%;
+        padding-left: 6px;
+        font-size: 2.8rem;
+    }
+}
+@media only screen and  (max-width:800px) {
+    .singleGenreList li{
+        width:33.33%;
+        padding:25px 30px;
+}
+.singleGenreList h4{
+    margin:0;
+    padding-bottom: 25px;
+    font-size: 1.2rem;
+}
+}
+@media only screen and  (max-width:700px) {
+    .groupName{
+        margin-top:15%;
+        padding-left: 6px;
+        font-size: 2.6rem;
+    }
+    .singleGenreList li{
+        width:33.33%;
+        padding:20px 25px;
+}
+.singleGenreList h4{
+    margin:0;
+    padding-bottom: 25px;
+    font-size: 1rem;
+}
+}
+@media only screen and  (max-width:600px) {
+    .singleGenreList li{
+        width:50%;
+        padding:17px 25px;
+}
+.singleGenreList h4{
+    margin:0;
+    padding-bottom: 25px;
+    font-size: 1.2rem;
+}
+.groupName{
+    font-size: 2.4rem;
+}
+}
+@media only screen and  (max-width:500px) {
+    .groupName{
+        margin-top:20%;
+        padding-left: 6px;
+        font-size: 2.6rem;
+    }
 }

@@ -2,6 +2,7 @@ import LayOut from '../../components/layout';
 import Movies from '../../components/movies';
 import "./index.css"
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function MoviesPage(){
     useEffect(()=>{
@@ -16,7 +17,7 @@ export default function MoviesPage(){
                 <div className="movieBanner-content">
                     <h1 > Movies</h1>
                     <i class="fa-solid fa-house-chimney"></i>
-                    <span>Home</span>
+                    <Link to="/"><span>Home</span></Link>
                     <i class="fa-solid fa-angle-right"></i>
                     <span className="active"> Movies</span>
                 </div>

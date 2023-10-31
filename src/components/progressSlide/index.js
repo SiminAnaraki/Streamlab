@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import './styles.css';
-import { Scrollbar,Autoplay } from 'swiper';
+import { Scrollbar,Autoplay } from 'swiper/modules';
 import Info1 from './Info/info1';
 import Info2 from './Info/info2';
 import Info3 from './Info/info3';

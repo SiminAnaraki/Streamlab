@@ -30,7 +30,7 @@ export default function SingleGenre(){
                 
     return(
         <>
-            <div className="smallContainer">
+            <div className="container">
             <h1 className={styles.groupName}>{name}</h1>
                 <ul className={styles.singleGenreList}>
                     {genreFarm()}

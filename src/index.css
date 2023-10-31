@@ -39,11 +39,12 @@ a {
 }
 .swiper-button-prev {
   font-weight:700;
-  padding-left:25px;
+  margin-left:10px;
 }
 .swiper-button-next {
   font-weight:700;
-  padding-right:25px;
+  margin-right:10px;
+  
 }
 
 @media only screen and (max-width: 1500px){
@@ -51,7 +52,24 @@ a {
     width:100%;
     padding:0 30px;
   }
+  .swiper-button-prev {
+    font-weight:700;
+    margin-left:15px;
+  }
+  .swiper-button-next {
+    font-weight:700;
+    margin-right:15px;
+    
+  }
 }
+@media only screen and (max-width:1200px) {
+  .swiper-button-prev::after {
+      display: none;
+    }
+    .swiper-button-next::after {
+      display: none;
+    }
+  }
 @media only screen and (max-width: 800px){
   .container{
     padding:0 20px;
@@ -59,6 +77,6 @@ a {
 }
 @media only screen and (max-width: 660px){
   .container{
-    padding:0 10px;
+    padding:0 20px;
   }
 }

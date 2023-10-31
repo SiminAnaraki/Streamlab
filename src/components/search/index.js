@@ -65,7 +65,7 @@ export default function Search(){
         <div className="search">
             <input type="text" placeholder="Search ..." onChange={onSearch}/>
             <div className="searchButton">
-                <button onClick={onSearch}>
+                <button className="redButton" onClick={onSearch}>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>

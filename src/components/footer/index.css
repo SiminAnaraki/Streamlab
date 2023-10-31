@@ -10,7 +10,7 @@
     display: flex;
     gap: 10px;
     justify-content: space-between;
-   padding-bottom: 20px;
+    padding-bottom: 20px;
   
 }
 .footer-holder  li {
@@ -22,7 +22,7 @@
     margin-top: 15px;
 }
 .footer-holder li h2 {
-   font-size:24px;
+   font-size:1.7rem;
    margin: 10px 0;
 }
 .first-column p,.fourth-column p {
@@ -82,11 +82,10 @@
 .third-column .two-columns ul li a:hover {
     color:#e50916;
 }
- 
 .two-columns {
     display:flex;
     gap:80px;
-    font-size: 15px;
+    font-size: 1.1rem;
 }
 .fourth-column {
     margin-top:10px;
@@ -102,7 +101,7 @@
 }
 .footer-holder .first-column,.fourth-column {
     line-height:30px;
-    font-size: 17px;;
+    font-size: 1.21rem;
 }
 .copyright {
     width:100%;
@@ -152,7 +151,7 @@ h2{
 @media only screen and (max-width:1400px) {
     .footer-holder {
        padding-bottom: 00px;
-       padding-left: 35px;;
+       padding-left: 0px;
        flex-wrap: wrap;
        gap:3px;
     }
@@ -168,20 +167,46 @@ h2{
         margin-bottom: 30px;
     }
 }
+
 @media only screen and (max-width:750px) {
      .footer-holder  li {
          width:100%;
      }
+     
+     .footer-holder li h2 {
+        font-size:1.6rem;
+     }
+     .footer-holder li img {
+        width:180px;
+        height:auto;
+     }
      .first-column p,.fourth-column p {
-        width:60%
+        width:85%;
+        font-size: 1rem;
+    }
+    .two-columns {
+        gap:120px;
+    }
+    .third-column ul li p,
+    .second-column ul li p{
+        font-size: 1.1rem;
+    }
+    .footer-holder .app img {
+        width: 130px;
+        height: auto;
+        margin-top:35px;
+    }
+    .copyright p {
+       font-size: .8rem;
     }
     .footer .fa-solid {
-        font-size:23px;
+        font-size:1.64rem;
         width:40px;
         height:40px;
         bottom:75px;
         right:35px;
         font-size:20px;
+        line-height: 40px;
         
     }
     

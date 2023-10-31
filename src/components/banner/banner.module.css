@@ -20,7 +20,6 @@ body {
   margin:0;
   padding:0;
 }
-
 .swiper-slide,
 .swiper-slide-active {
   text-align: center;
@@ -88,7 +87,6 @@ body {
   100%{opacity:1;
   transform: translateX(0);}
 }
-
 .layer .leftMotion .title {
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -123,18 +121,12 @@ body {
 }
 .layer .leftMotion .country {
   border: 1px solid #fff;
-  padding:2px 5px;
+  padding:1px 5px;
   font-size: .9rem;
-  max-height: 32px;
-  width:30px; 
+  height: 26px;
+  width:max-content; 
   animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.1s both;
 }
-.layer .leftMotion .country2 {
-  font-size: 0.79rem;
-  overflow: hidden;
-  animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.1s both;
-}
-
 .layer .leftMotion img {
   width:50px;
   height:25px;
@@ -154,8 +146,6 @@ body {
   animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.2s both;
 }
 .layer .leftMotion .special {
-  /* max-height:80px;
-  overflow: hidden; */
   font-size: 1.1rem;
 }
 .layer .leftMotion .data {
@@ -220,7 +210,6 @@ body {
 .layer .rightMotion .video p {
   font-size:1.5rem;
   font-weight: 500;
-  
 }
 .layer .rightMotion .video i {
   font-size:3.5rem ;
@@ -228,9 +217,7 @@ body {
   top:-50%;
   left:50%;
   transform: translate(-50%,-50%);
-  
   padding:12px 18px;
-  
 }
 .layer .rightMotion .video i::after {
   border:3px solid #fff;
@@ -244,7 +231,19 @@ body {
   opacity:0;
   
 }
+@media only screen and (max-width: 1600px) {
+  .layer .leftMotion .longTitle {
+    font-size: 3.4rem;
+    line-height: 5.3rem;
+    padding:10px 0;
+  }
+}
 @media only screen and (max-width: 1500px) {
+  .layer .leftMotion .longTitle {
+    font-size: 3.3rem;
+    line-height: 5.5rem;
+    padding:10px 0;
+  }
   .layer .leftMotion {
     width:40%;
     padding-left:60px;
@@ -260,10 +259,7 @@ body {
     width:700px;
     margin-top:80px;
   }
-  .layer .flexHolder{
-    display:flex;
-    gap:100px;
-}
+ 
 .layer .rightMotion .video {
   top:50%;
   left:58%;
@@ -271,25 +267,237 @@ body {
   animation:play 2s
 }
 }
-@media only screen and (max-width: 1400px) {
-  layer .rightMotion img {
-    width:650px;
-    margin-top:80px;
-  }
+@media only screen and (max-width:1400px) {
   .layer .leftMotion .title {
     font-size: 1.3rem;
+    line-height: 3.3rem;
 }
 .layer .leftMotion h1 {
   font-size: 3.3rem;
 }
+.layer .leftMotion .longTitle {
+  font-size: 3rem;
+  line-height: 5rem;
+  padding:10px 0;
 }
-.layer .leftMotion .country {
-  padding:2px 5px;
-  font-size: .8rem;
-  width: 300px;
+.layer .leftMotion .imdb {
+  font-size:1.1rem;
 }
-
-
-
+.layer .leftMotion img {
+  width:50px;
+  height:23px;
+  margin-left: 23px;
+}
+.layer .leftMotion  .plot {
+  width:95%;
+  font-size: 1.12rem;
+}
+.layer .leftMotion .special {
+  font-size: 1rem;
+}
+.layer .leftMotion .data {
+  font-size: 1rem;
+}
+.layer .leftMotion .playButton {
+  padding:15px 25px;
+  font-size: 1rem;
+  
+}
+.layer .leftMotion .playButton i {
+  padding-right:12px;
+  font-size: 1.2rem;
+}
+}
+@media only screen and (max-width:1350px) {
+  .layer .flexHolder{
+    display:flex;
+    gap:65px;
+}
+.layer .rightMotion img {
+  width:640px;
+  margin-top:80px;
+}
+.layer .rightMotion .video {
+  top:50%;
+  left:59%;
+  transform: translate(-50%,-50%);
+}
+.layer .rightMotion .video p {
+  font-size:1.4rem;
+}
+.layer .rightMotion .video i {
+  font-size:3.3rem ;
+}
+}
+@media only screen and (max-width:1310px) {
+  .layer .leftMotion h1 {
+    font-size: 3.2rem;
+  }
+  .layer .leftMotion .data {
+    font-size: 1rem;
+    margin:5px 1px;
+  }
+  .layer .rightMotion img {
+    width:630px;
+    margin-top:80px;
+  }
+  }
+  @media only screen and (max-width:1250px) {
+    .layer .leftMotion .data {
+      font-size: .9rem;
+      margin:5px 1px;
+    }
+    .layer .leftMotion  .plot {
+      width:95%;
+      font-size: 1.1rem;
+    }
+    .layer {
+      height:90vh;
+  }
+  .layer .rightMotion img {
+    width:610px;
+    margin-top:80px;
+  }
+}
+@media only screen and (max-width:1210px) {
+  .layer .leftMotion .title {
+    font-size: 1.2rem;
+}
+  .layer .leftMotion h1 {
+    font-size: 3.1rem;
+  }
+  .layer .leftMotion .longTitle {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+    padding:10px 0 ;
+  }
+  .layer .leftMotion .data {
+    font-size: .7rem;
+    margin:3px 1px;
+  }
+}
+@media only screen and (max-width:1200px) {
+  .layer .rightMotion {
+   display: none; 
+  }
+  .layer .leftMotion {
+    width:60%;
+    padding-left:40px;
+    margin-bottom: 20px;
+    height:90%;
+  }
+}
+@media only screen and (max-width:900px) {
+  .layer .leftMotion {
+    width:60%;
+    padding-left:40px;
+    margin-bottom: 20px;
+    height:90%;
+  }
+}
+@media only screen and (max-width:800px) {
+  .layer {
+    height:85vh;
+}
+.layer .leftMotion .playButton {
+  padding:13px 21px;
+  font-size: .9rem;
+  
+}
+.layer .leftMotion .playButton i {
+  padding-right:10px;
+  font-size: 1.1rem;
+}
+.layer .leftMotion {
+  width:75%;
+  padding-left:30px;
+  margin-bottom: 20px;
+  height:90%;
+}
+}
+@media only screen and (max-width:750px) {
+  .layer .leftMotion .longTitle {
+    font-size: 2.4rem;
+  }
+  .layer .leftMotion .data p{
+    font-size: .7rem;
+    margin:2px 1px;
+  }
+  .layer .leftMotion .data span {
+    font-size: 1.2rem;
+  }
+  .layer .leftMotion  .plot {
+    width:95%;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .layer .leftMotion .imdb {
+    font-size:1rem;
+  }
+  .layer .leftMotion img {
+    width:50px;
+    height:23px;
+    margin-left: 23px;
+  }
+  .layer .leftMotion .country {
+    padding:0px 5px;
+    font-size: .85rem;
+    height: 25px;
+}
+}
+@media only screen and (max-width:600px) {
+  .layer .leftMotion h1 {
+    font-size: 2.8rem;
+  }
+  .layer .leftMotion .longTitle {
+    font-size: 2.4rem;
+  }
+  .layer .leftMotion .data p{
+    font-size: .6rem;
+    margin:2px 1px;
+  }
+  .layer .leftMotion .data span {
+    font-size: 1.1rem;
+  }
+  .layer .leftMotion  .plot {
+    width:95%;
+    font-size: .9rem;
+    margin-bottom: 20px;
+  }
+  .layer .leftMotion  .plot1 {
+    padding:15px 0 10px 0;
+  }
+  .layer .leftMotion  .plot3{
+    padding:20px 0 10px 0;
+  }
+  .layer .leftMotion .special {
+    font-size: .8rem;
+  }
+  .layer .leftMotion .playButton {
+    padding:11px 19px;
+    font-size: .8rem;
+    
+  }
+  .layer .leftMotion .playButton i {
+    padding-right:8px;
+    font-size: 1rem;
+  }
+  .layer .leftMotion {
+    width:80%;
+    padding-left:20px;
+    margin-bottom: 10px;
+    height:90%;
+  }
+}
+@media only screen and (max-width:500px) {
+  .layer .leftMotion {
+    width:80%;
+    padding-left:15px;
+    height:90%;
+  }
+  .layer .leftMotion .special {
+    font-size: .7rem;
+  }
+} 
 
 

@@ -18,15 +18,15 @@
 }
 .movieBanner-content {
     position: absolute;
-    top:50%;
+    top:55%;
     left:50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
 .movieBanner-content h1 {
-    font-size:3.7rem;
+    font-size:3.5rem;
     margin:0;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 .movieBanner-content i {
     padding:0 8px;
@@ -39,21 +39,15 @@
 .movieBanner-content .active {
     margin-left: -5px;
 }
-@media only screen and (max-width:1000px) {
-    .movieBanner-content {
-        top:60%;
-        left:50%;
-        transform: translate(-50%,-50%);
-    }
+@media only screen and (max-width:1023px) {
     .movieBanner-content h1 {
-        font-size:3.4rem;
-        padding-bottom: 15px;
+        font-size:3.1rem;
+        padding-bottom: 5px;
     }
 }
 @media only screen and (max-width:800px) {
     .movieBanner-content h1 {
-        font-size:3.2rem;
-        padding-bottom: 10px;
+        font-size:3rem;
     }
     .movieBanner-content i {
         padding:0 8px;
@@ -66,15 +60,37 @@
 }
 @media only screen and (max-width:600px) {
     .movieBanner-content h1 {
-        font-size:3rem;
+        font-size:2.5rem;
         padding-bottom: 2px;
     }
     .movieBanner-content i {
-        padding:0 8px;
+        padding:0 6px;
         font-size:1rem;
         margin-left: -5px;
     }
     .movieBanner-content span {
         font-size:1rem;
+    }
+    .movieBanner-content .active {
+        margin-left: -5px;
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width:500px) {
+    .movieBanner-content h1 {
+        font-size:2.3rem;
+        padding-bottom: 0px;
+    }
+    .movieBanner-content i {
+        padding:0 5px;
+        font-size:.9rem;
+        margin-left: -3px;
+    }
+    .movieBanner-content span {
+        font-size:.85rem;
+    }
+    .movieBanner-content .active {
+        margin-left: -5px;
+        font-size: 1rem;
     }
 }

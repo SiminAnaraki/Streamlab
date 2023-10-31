@@ -17,16 +17,16 @@ export default function BannerInfo3(){
         }
           )}
 
-        const {title,country,imdb_rating,actors,poster,plot,genres,awards} = info;
+        const {title,country,imdb_rating,actors,type,plot,genres,awards} = info;
     return (
         <>
             <h1>{title}</h1>
             <div className={styles.flexHolder2}>
-                <span className={`${styles.country} ${styles.country2 }`}>{country}</span>
+                <span className={`${styles.country} ${styles.country3 }`}>{type}</span>
                 <img src="/assets/images/asset-2.png"/>
                 <span className={styles.imdb}>{imdb_rating}</span>
             </div>
-            <p className={styles.plot}>{plot}</p>
+            <p className={`${styles.plot} ${styles.plot3}`}>{plot}</p>
             <p className={styles.data}><span>Cast:</span>{actors}</p>
             <p className={styles.data}><span>Genre:</span>{genres}</p>
             <p className={styles.data}><span>Awards:</span>{awards}</p>

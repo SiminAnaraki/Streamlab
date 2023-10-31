@@ -17,12 +17,12 @@ export default function BannerInfo2(){
         }
           )}
 
-        const {title,country,imdb_rating,actors,poster,plot,genres,awards} = info;
+        const {title,country,imdb_rating,actors,type,plot,genres,awards} = info;
     return (
         <>
-            <h1>{title}</h1>
+            <h1 className={styles.longTitle}>{title}</h1>
             <div className={styles.flexHolder2}>
-                <span className={styles.country}>{country}</span>
+                <span className={styles.country}>{type}</span>
                 <img src="/assets/images/asset-2.png"/>
                 <span className={styles.imdb}>{imdb_rating}</span>
             </div>

@@ -3,6 +3,7 @@ import Search from '../search';
 import Genres from '../genres';
 import styles from './header.module.css'
 import { useEffect } from 'react';
+import Hambur from './hambur';
 
 export default function Header(){
     useEffect(() => {
@@ -53,7 +54,7 @@ export default function Header(){
                             <li className={styles.red}>
                                 <div className={styles.angle}>
                                     <Link to="/" >
-                                        <p>Home</p>
+                                        <p className={styles.home}>Home</p>
                                     </Link>
                                 </div>
                             </li>
@@ -97,11 +98,14 @@ export default function Header(){
                             </li>
                             <li>
                                 <Link to="/register">
-                                    <button>Subscribe</button>
+                                    <button className={styles.subscribe}>Subscribe</button>
                                 </Link>
                             </li>
-                            
                         </ul>
+                    </div>
+                    <div className={styles.hambur} >
+                        <Hambur/>
+                      
                     </div>
                 </div>
             </div>

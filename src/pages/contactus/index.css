@@ -45,13 +45,13 @@
 }
 .contact-container .triple {
     display:flex;
-   justify-content: space-between;
-   gap:25px;
-   padding-top:90px;
-   flex-wrap: wrap;
+    justify-content: space-between;
+    gap:25px;
+    padding-top:90px;
+    flex-wrap: wrap;
 }
 .contact-container .triple li {
-    width:403.33px;
+    width:31.7%;
     height:330px;
     background-color: #221f1f;
     text-align:center;
@@ -84,6 +84,7 @@
     text-transform: capitalize;
     margin:0;
     font-size: 2.3rem;
+    min-width: max-content;
 }
 .contact-container .triple li p {
     width:107%;
@@ -148,7 +149,7 @@
 ::placeholder {
     color:#ffffffb6;
 }
-button {
+.sendButton {
     padding:20px 30px;
     border-radius: 0;
     border:1px solid #b81d24;
@@ -164,22 +165,23 @@ button {
 @media only screen and (max-width:1350px){
     .contact-container {
         width:100%;
-        padding:0 50px;
+        padding:0 3%;
     }
     .contact-container .triple {
-       justify-content: space-between;
-       gap:0;
+       justify-content:center;
+       gap:25px;
        padding-top:90px;
     }
-    .contact-container .triple li {
-        width:360.33px;
-        height:300px;
+    .contact-container .triple .big {
+        text-transform: capitalize;
+        margin:0;
+        font-size: 2.31rem;
+        padding-bottom: 6px;
     }
+   
     .contact-container .triple li .info-icon {
         width:90px;
         height:90px;
-       
-        
     }
     .contact-container .triple li .info-icon i {
         margin-top:20px;
@@ -195,10 +197,7 @@ button {
     }
 }
 @media only screen and (max-width:1250px){
-    .contact-container .triple {
-        display: flex;
-        justify-content: space-around;
-    }
+
     .contact-container .triple li {
         width:30%;
     }
@@ -253,7 +252,7 @@ button {
 }
     .contact-container .get-in-touch {
     gap:20px;
-    padding:0 35px;
+    
 }
     .contact-container .get-in-touch .message-box,
     .contact-container .get-in-touch .map {

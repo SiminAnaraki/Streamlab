@@ -17,7 +17,7 @@ body {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 100%; 
 }
 
 .swiper-slide {
@@ -28,10 +28,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .slideMovies {
   padding:60px 0 70px 0;
-  background-color: #161616;
+  background-color: #161616; 
 }
 .swiper-slide img {
   display: block;
@@ -42,7 +43,9 @@ body {
 .pic {
     width: 100%;
     height: 100%;     
-    transition: transform .5s ease;        
+    transition: transform .5s ease;
+    vertical-align: middle;
+    border-radius: 3%;        
 }
 .slideMovies .titr {
   display: flex;
@@ -52,12 +55,12 @@ body {
 }
 .slideMovies .titr h4 {
   font-size:2rem;
-  margin: 0 0 5px 50px;
+  margin: 0 0 5px 55px;
 }
 .slideMovies .titr p {
   background-color: #e50916;
   padding:13px 33px;
-  margin-right: 50px;
+  margin-right: 55px;
 }
 .slideMovies ul li {
   width:100%;
@@ -69,9 +72,10 @@ body {
 }
 .slideMovies ul li .picHolder {
   width:100%;
-  height:350px;
+  height:auto;
   overflow: hidden;
   position: relative;
+  border-radius: 3%; 
 }
 .slideMovies ul li .picHolder .play {
   position:absolute;
@@ -181,15 +185,19 @@ body {
 .slideMovies ul li p:hover {
   color:#e50916;
 }
+@media only screen and (max-width:1500px) {
+  .slideMovies {
+    margin:0 -10px;
+  }
+}
 @media only screen and (max-width:1350px) {
   .slideMovies .titr h4 {
     font-size:1.8rem;
-    
+
   }
   .slideMovies ul li .movieTitle {
     font-size:1.1rem;
     width:max-content;
-  
   }
   .slideMovies ul li h6 {
     font-size:.9rem;
@@ -213,6 +221,9 @@ body {
   }
 }
 @media only screen and (max-width:900px) {
+  .slideMovies {
+    margin:0 -15px;
+  }
   .slideMovies .titr h4 {
     font-size:1.4rem;
   }
@@ -220,11 +231,13 @@ body {
     padding:10px 26px;
   }
 }
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:800px) {
+  .slideMovies {
+    margin:0 -18px;
+  }
   .slideMovies ul li .movieTitle {
     font-size:1.2rem;
     width:max-content;
-  
   }
   .slideMovies ul li h6 {
     font-size:.9rem;
@@ -232,11 +245,17 @@ body {
   }
 }
 @media only screen and (max-width:600px) {
+  .slideMovies {
+    padding:40px 0 40px 0; 
+  }
+  .slideMovies {
+    margin:0 -30px;
+  }
   .slideMovies .titr h4 {
-    font-size:1.2rem;
+    font-size:1.3rem;
   }
   .slideMovies .titr p {
-    padding:8px 21px;
+    padding:8px 16px;
   }
   .slideMovies ul li .movieTitle {
     font-size:1rem;
@@ -249,39 +268,62 @@ body {
   }
 }
 @media only screen and (max-width:500px) {
+  .slideMovies {
+    padding:40px 0 40px 0; 
+  }
+  .slideMovies {
+    margin:0 -35px;
+  }
+  .slideMovies .titr {
+    display: flex;
+    gap:20px
+  }
   .slideMovies .titr h4 {
-    font-size:.8rem;
+    font-size:1.3rem;
+    margin: 0 0 5px 55px;
   }
   .slideMovies .titr p {
-    padding:8px 18px;
     font-size: .9rem;
+    margin-right: 55px;
   }
   .slideMovies ul li .picHolder {
-    width:80%;
-    height:350px;
+    width:100%;
+    height:auto;
     overflow: hidden;
     position: relative;
-    margin-left: 40px;
+    margin-left: 0px;
 }
 .slideMovies ul li .picHolder::after{
   width:100%;
-  height: 350px;
-}
-.slideMovies .titr h4 {
-  margin: 0 0 5px 90px;
-}
-.slideMovies .titr p {
-  margin-right: 80px;
-  padding:6px 18px;
+  height: auto;
 }
 .slideMovies ul li .movieTitle {
   font-size:1rem;
   width:90%;
-  margin-left:40px;
+  margin-left:0px;
 }
 .slideMovies ul li h6 {
   font-size:.8rem;
   letter-spacing: 1.6px;
-  margin-left:40px;
+  margin-left:0px;
 }
+}
+@media only screen and (max-width:460px) {
+  .slideMovies .titr h4 {
+    font-size:1.2rem;
+    margin: 0 0 5px 55px;
+  }
+  .slideMovies .titr p {
+    font-size: .8rem;
+    margin-right: 55px;
+  }
+}
+@media only screen and (max-width:425px) {
+  .slideMovies .titr h4 {
+    font-size:1.02rem;
+  }
+  .slideMovies .titr p {
+    padding:6px 15px;
+    font-size: .8rem;
+  }
 }

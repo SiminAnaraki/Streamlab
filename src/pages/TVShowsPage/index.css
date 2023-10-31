@@ -10,50 +10,55 @@
     left:0;
     width:100%;
     height:100%;
-    background-color: rgba(0,0,0,.85);
+    background-color: rgba(0,0,0,.89);
 }
 .TVBanner img {
     width:100%;
     height: 45vh;
+    object-fit: cover;
 }
 .TVBanner-content {
     position: absolute;
-    top:50%;
+    top:55%;
     left:50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
 .TVBanner-content h1 {
-    font-size:3.7rem;
+    font-size:3.5rem;
     margin:0;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 .TVBanner-content i {
     padding:0 8px;
-    font-size:1.2rem;
+    font-size:1.1rem;
     margin-left: -5px;
 }
-.TVBanner-content span {
+.TVBanner-content .default {
+    transition: all .5s;
+}
+.TVBanner-content .default:hover {
+    color: #e50916;
+}
+.TVBanner-content .default:hover .fa-house-chimney{
+    color: #e50916;
+}
+.TVBanner-content span{
     font-size:1.2rem;
 }
 .TVBanner-content .active {
     margin-left: -5px;
+    font-size: 1.2rem;
 }
-@media only screen and (max-width:1000px) {
-    .TVBanner-content {
-        top:60%;
-        left:50%;
-        transform: translate(-50%,-50%);
-    }
+@media only screen and (max-width:1023px) {
     .TVBanner-content h1 {
-        font-size:3.4rem;
-        padding-bottom: 15px;
+        font-size:3.1rem;
+        padding-bottom: 5px;
     }
 }
 @media only screen and (max-width:800px) {
     .TVBanner-content h1 {
-        font-size:3.2rem;
-        padding-bottom: 10px;
+        font-size:3rem;
     }
     .TVBanner-content i {
         padding:0 8px;
@@ -66,15 +71,37 @@
 }
 @media only screen and (max-width:600px) {
     .TVBanner-content h1 {
-        font-size:3rem;
+        font-size:2.5rem;
         padding-bottom: 2px;
     }
     .TVBanner-content i {
-        padding:0 8px;
+        padding:0 6px;
         font-size:1rem;
         margin-left: -5px;
     }
     .TVBanner-content span {
-        font-size:1rem;
+        font-size:.9rem;
+    }
+    .TVBanner-content .active {
+        margin-left: -5px;
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width:500px) {
+    .TVBanner-content h1 {
+        font-size:2.3rem;
+        padding-bottom: 0px;
+    }
+    .TVBanner-content i {
+        padding:0 5px;
+        font-size:.9rem;
+        margin-left: -3px;
+    }
+    .TVBanner-content span {
+        font-size:.85rem;
+    }
+    .TVBanner-content .active {
+        margin-left: -5px;
+        font-size: 1rem;
     }
 }

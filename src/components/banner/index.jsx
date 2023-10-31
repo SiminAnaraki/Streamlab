@@ -1,41 +1,35 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+
+import {Swiper,SwiperSlide} from "swiper/react"
 import 'swiper/css/navigation';
-import styles from './banner.module.css';
-// import required modules
-import { Autoplay, Navigation } from 'swiper';
+import { Navigation,Autoplay} from 'swiper/modules'
 import BannerInfo1 from './bannerInfo/info1';
 import BannerInfo2 from './bannerInfo/info2';
 import BannerInfo3 from './bannerInfo/info3';
+import styles from './banner.module.css';
 import { Link } from 'react-router-dom';
 
 export default function Banner() {
-  
   return (
     <>
       <Swiper
-        style={{"--swiper-navigation-size":"25px",
-                '--swiper-navigation-color': '#fff',
-                '--swiper-navigation-weight': '500',
-              }}
+         style={{"--swiper-navigation-size":"25px",
+         '--swiper-navigation-color': '#fff',
+         '--swiper-navigation-weight': '500',
+       }}
+      
         loop={true}
         spaceBetween={0}
         centeredSlides={false}
         autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: false,
-        }}
-        navigation={true}
-        modules={[ Navigation,]}
-        
-        className="mySwiper"
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: false,
+      }}
+      navigation={true}
+      modules={[ Autoplay]}
+      className="mySwiper"
       >
         <SwiperSlide>
           <div className={styles.layer}>
